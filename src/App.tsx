@@ -1,16 +1,15 @@
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ResourcesPage from "./pages/ResourcesPage";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <Experience />
-      <Projects />
-      <Contact />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/resources" element={<ResourcesPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
