@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Download, FileText, Lock } from "lucide-react";
+import { ArrowLeft, Download, FileText, Lock, Search } from "lucide-react";
 import {
   resources,
   resourceCategories,
@@ -84,11 +84,27 @@ function ResourceCard({ resource, index }: { resource: ResourceEntry; index: num
 
 export default function Resources() {
   const [activeCategory, setActiveCategory] = useState<ResourceCategory | "all">("all");
+  const [query, setQuery] = useState("");
 
-  const filtered =
-    activeCategory === "all"
-      ? resources
-      : resources.filter((r) => r.category === activeCategory);
+  const normalizedQuery = query.trim().toLowerCase();
+
+  const filtered = resources.filter((resource) => {
+    const matchesCategory =
+      activeCategory === "all" || resource.category === activeCategory;
+
+    if (!matchesCategory) return false;
+    if (!normalizedQuery) return true;
+
+    const haystack = [
+      resource.title,
+      resource.description,
+      categoryLabels[resource.category],
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    return haystack.includes(normalizedQuery);
+  });
 
   return (
     <main className="relative pb-20 pt-8 sm:pb-28 sm:pt-10 lg:pb-32 lg:pt-12">
@@ -115,6 +131,26 @@ export default function Resources() {
           </h1>
           <p className="max-w-xl text-[15px] leading-[1.6] text-zinc-400 sm:text-[17px]">
             Playbooks, prompt libraries, and agentic prompt packs — downloadable PDFs you can use in your own work.
+          </p>
+        </div>
+
+        <div className="mb-6 px-5 sm:mb-8 sm:px-8 lg:px-12">
+          <label className="relative block max-w-md">
+            <span className="sr-only">Search resources</span>
+            <Search
+              size={16}
+              className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500"
+            />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search resources…"
+              className="w-full rounded-full border border-white/10 bg-white/[0.03] py-2.5 pl-10 pr-4 text-[13px] text-white outline-none transition-colors duration-300 placeholder:text-zinc-500 focus:border-[#F26522]/45 focus:bg-white/[0.05]"
+            />
+          </label>
+          <p className="mt-2.5 text-[12px] text-zinc-500">
+            Can&apos;t find what you need? Search here by title, topic, or category.
           </p>
         </div>
 
@@ -148,7 +184,9 @@ export default function Resources() {
 
         {filtered.length === 0 && (
           <p className="px-5 text-center text-[14px] text-zinc-500 sm:px-8 lg:px-12">
-            No resources in this category yet.
+            {normalizedQuery
+              ? `No resources match “${query.trim()}”. Try another keyword or clear the search.`
+              : "No resources in this category yet."}
           </p>
         )}
       </div>
