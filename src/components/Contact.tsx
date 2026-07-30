@@ -29,10 +29,6 @@ export default function Contact() {
           Let&apos;s build something.
         </motion.h2>
 
-        <p className="mb-8 max-w-xl text-[15px] leading-[1.6] text-zinc-400 sm:text-[17px]">
-          Open to new projects, contract work and full-time roles.
-        </p>
-
         <RollButton
           text="sanchitpandey07@hotmail.com"
           href="mailto:sanchitpandey07@hotmail.com"
