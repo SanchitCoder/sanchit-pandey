@@ -70,4 +70,37 @@ export const resources: ResourceEntry[] = [
     pages: 19,
     updated: "2026",
   },
+  {
+    id: "ai-booking-assistant-blueprint",
+    title: "AI Booking Assistant Blueprint",
+    description:
+      "A blueprint for building an AI booking assistant — flows, tools, and handoff patterns that turn inquiries into confirmed appointments.",
+    category: "playbook",
+    file: "/resources/AI-Booking-Assistant-Blueprint-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 17,
+    updated: "2026",
+  },
+  {
+    id: "invisible-online",
+    title: "Invisible Online",
+    description:
+      "A practical system for staying present online without constant posting — automation, distribution, and quiet growth loops.",
+    category: "playbook",
+    file: "/resources/Invisible-Online-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 19,
+    updated: "2026",
+  },
+  {
+    id: "zoom-repurposing-system",
+    title: "Zoom Repurposing System",
+    description:
+      "Turn Zoom calls into multi-format content — clips, carousels, and captions from one recording pipeline.",
+    category: "playbook",
+    file: "/resources/Zoom-Repurposing-System-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 19,
+    updated: "2026",
+  },
 ];
