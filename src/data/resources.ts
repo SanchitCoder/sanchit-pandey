@@ -103,4 +103,37 @@ export const resources: ResourceEntry[] = [
     pages: 19,
     updated: "2026",
   },
+  {
+    id: "claude-code-design-skills",
+    title: "3 Claude Code Design Skills",
+    description:
+      "Three Claude Code skills for sharper UI and design work — patterns you can drop into your coding workflow.",
+    category: "prompt-library",
+    file: "/resources/3-Claude-Code-Design-Skills-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 14,
+    updated: "2026",
+  },
+  {
+    id: "two-minute-website-stack",
+    title: "The 2-Minute Website Stack",
+    description:
+      "A lean stack for shipping clean websites fast — tools, structure, and a build flow that stays simple.",
+    category: "playbook",
+    file: "/resources/The-2-Minute-Website-Stack-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 16,
+    updated: "2026",
+  },
+  {
+    id: "why-your-site-isnt-ranking",
+    title: "Why Your Site Isn't Ranking",
+    description:
+      "A practical breakdown of why sites stall in search — and the fixes that move rankings without fluff.",
+    category: "playbook",
+    file: "/resources/Why-Your-Site-Isnt-Ranking-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 17,
+    updated: "2026",
+  },
 ];
