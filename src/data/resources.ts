@@ -136,4 +136,26 @@ export const resources: ResourceEntry[] = [
     pages: 17,
     updated: "2026",
   },
+  {
+    id: "product-photography-prompt-codes",
+    title: "100 Product Photography Prompt Codes",
+    description:
+      "A library of prompt codes for consistent product photography — lighting, angles, backgrounds, and shot styles you can reuse.",
+    category: "prompt-library",
+    file: "/resources/100-Product-Photography-Prompt-Codes-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 19,
+    updated: "2026",
+  },
+  {
+    id: "getting-started-with-strawberry",
+    title: "Getting Started With Strawberry",
+    description:
+      "A practical starter guide for Strawberry — setup, first workflows, and how to get useful output without extra friction.",
+    category: "playbook",
+    file: "/resources/Getting-Started-With-Strawberry-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 15,
+    updated: "2026",
+  },
 ];
