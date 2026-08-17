@@ -158,4 +158,37 @@ export const resources: ResourceEntry[] = [
     pages: 15,
     updated: "2026",
   },
+  {
+    id: "claude-code-content-agents",
+    title: "5 Claude Code Content Agents",
+    description:
+      "Five Claude Code agents for content work — research, drafting, editing, and shipping from one repeatable setup.",
+    category: "agentic-prompts",
+    file: "/resources/5-Claude-Code-Content-Agents-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 16,
+    updated: "2026",
+  },
+  {
+    id: "instagram-strategy-reverse-engineer",
+    title: "Instagram Strategy Reverse Engineer",
+    description:
+      "A method for reverse-engineering Instagram accounts — positioning, content patterns, and a strategy you can reuse.",
+    category: "playbook",
+    file: "/resources/Instagram-Strategy-Reverse-Engineer-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 13,
+    updated: "2026",
+  },
+  {
+    id: "carousel-engine",
+    title: "The Carousel Engine",
+    description:
+      "A system for planning and producing carousels at scale — hooks, structure, and a repeatable content pipeline.",
+    category: "playbook",
+    file: "/resources/The-Carousel-Engine-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 14,
+    updated: "2026",
+  },
 ];
