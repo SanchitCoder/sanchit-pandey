@@ -191,4 +191,15 @@ export const resources: ResourceEntry[] = [
     pages: 14,
     updated: "2026",
   },
+  {
+    id: "claude-skills",
+    title: "5 Claude Skills",
+    description:
+      "Five ready-to-use Claude skills you can drop into your workflow — clearer outputs, faster iteration, less setup.",
+    category: "prompt-library",
+    file: "/resources/5-Claude-Skills-Sanchit-Pandey.pdf",
+    available: true,
+    pages: 11,
+    updated: "2026",
+  },
 ];
